@@ -1,3 +1,3 @@
 ## Satoshi Vision
 
-# A website to price things is Sats
+A website to price USD is Sats
