@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { FaBitcoin } from "react-icons/fa";
 import "./App.css";
+import commaNum from "./commaNum";
 
 const url = "https://api.coindesk.com/v1/bpi/currentprice.json";
 
 const BtcPrice = () => {
   const [price, setPrice] = useState([]);
   let [priceSats, setPriceSats] = useState([]);
-
-  function commaNum(num) {
-    var num_parts = num.toString().split(".");
-    num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return num_parts.join(".");
-  }
+  const sats = 100000000;
 
   const getPrice = async () => {
     const response = await fetch(url);
@@ -22,13 +18,11 @@ const BtcPrice = () => {
     setPrice(commaNum(btcRnd));
     priceSats = String(Math.round(100000000 / btcPrice));
     setPriceSats(commaNum(priceSats));
-
-    //console.log(btcPrice);
   };
-  console.log(price);
+
   useEffect(() => {
     getPrice();
-    document.title = `$1 buys ${priceSats} Satoshis`;
+    document.title = `$1 buys ${priceSats} Sats`;
   });
 
   return (
@@ -51,7 +45,7 @@ const BtcPrice = () => {
                   changes.
                 </div>
                 <br></br>
-                <div class="p">1 bitcoin = 100,000,000 Satoshis</div>
+                <div class="p">1 bitcoin = {commaNum(sats)} Sats</div>
               </div>
             </div>
 
