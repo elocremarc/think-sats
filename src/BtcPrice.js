@@ -37,18 +37,18 @@ const BtcPrice = () => {
         <div class="container vh-100 ">
           <div class="row">
             <div class="col-12 m-3 text-center text-light ">
-              <h1 class="display-4">Satoshi Vision</h1>
+              <h1 class="display-4">Think Sats</h1>
               <h1></h1>
-              <h5 class="m-2">$1 spent is {priceSats} sats lost</h5>
+              <h5 class="m-2">$1 buys {priceSats} sats</h5>
             </div>
             <div class="row col-12">
               <div class="col-sm-4"></div>
               <div class="col-sm-4 text-light text-center m-4 ">
                 <div class="p">
-                  In order to attain Satoshi Vision start pricing everything in
-                  your life in satoshis. Currently if you spend $1 you spend{" "}
-                  {priceSats} satoshis. Use this site to calibrate your Satoshi
-                  Vision as the price changes.
+                  Thinking in sats is when you price everything in your life in
+                  satoshis. Currently if you spend $1 it is like spending{" "}
+                  {priceSats} satoshis. Use this site to calibrate as the price
+                  changes.
                 </div>
                 <br></br>
                 <div class="p">1 bitcoin = 100,000,000 Satoshis</div>
