@@ -34,7 +34,7 @@ const BtcPrice = () => {
         </div>
 
         <div class="d-flex justify-content-center">
-          <p class="w-50 pt-4 text-left text-light">
+          <p class="w-75 container pt-4 text-left text-light">
             A Bitcoin can be broken down into {commaNum(sats)} sats. Thinking in
             terms of sats is much more useful than looking at the bitcoin price.
             Currently if you spend $1 it is like spending {priceSats} sats.
@@ -49,23 +49,23 @@ const BtcPrice = () => {
           class="col-12 m-3 text-center text-light
         p-4"
         >
-          <div class="d-flex flex-row rounded-top bg-dark fixed-bottom p-2">
+          <div class="d-flex flex-row  rounded-top  fixed-bottom p-2">
             <a
-              class="link text-light"
-              href="https://www.coindesk.com/price/bitcoin"
+              class="text-light"
+              href="https://github.com/elocremarc/think-sats"
             >
-              {" "}
-              Powered by CoinDesk
+              <FaGithub />
             </a>
             <div class="flex-fill">
               {<FaBitcoin />} = ${price}
             </div>
 
             <a
-              class="text-light"
-              href="https://github.com/elocremarc/think-sats"
+              class="link text-light"
+              href="https://www.coindesk.com/price/bitcoin"
             >
-              <FaGithub />
+              {" "}
+              Powered by CoinDesk
             </a>
           </div>
         </div>
