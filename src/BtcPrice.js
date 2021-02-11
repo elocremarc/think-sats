@@ -27,50 +27,44 @@ const BtcPrice = () => {
 
   return (
     <React.Fragment>
-      <div class="max-width">
-        <div class="container vh-100 ">
-          <div class="row">
-            <div class="col-12 m-3 text-center text-light ">
-              <h1 class="display-4">Think Sats</h1>
-              <h1></h1>
-              <h5 class="m-2">$1 buys {priceSats} sats</h5>
-            </div>
-            <div class="row col-12">
-              <div class="col-sm-4"></div>
-              <div class="col-sm-4 text-light text-center m-4 ">
-                <div class="p">
-                  Thinking in sats is when you price everything in your life in
-                  satoshis. Currently if you spend $1 it is like spending{" "}
-                  {priceSats} satoshis. Use this site to calibrate as the price
-                  changes.
-                </div>
-                <br></br>
-                <div class="p">1 bitcoin = {commaNum(sats)} Sats</div>
-              </div>
-            </div>
+      <div class="container vh-100">
+        <div class="col-12 text-light text-center">
+          <h1 class="display-4 text-center">Think Sats</h1>
+          <h5>$1 buys {priceSats} sats</h5>
+        </div>
 
-            <div class="d-flex flex-column">
-              <div class="flex-grow-1 "></div>
-            </div>
-            <div class="col-sm-4"></div>
-            <div class="col-12 m-3 text-center text-light">
-              <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
-                <a class="navbar-brand">
-                  {<FaBitcoin />} = ${price}{" "}
+        <div class="d-flex justify-content-center">
+          <p class="w-50 pt-4 text-left text-light">
+            A Bitcoin can be broken down into {commaNum(sats)} sats. Thinking in
+            terms of sats is much more useful than looking at the price of
+            bitcoin. Currently if you spend $1 it is like spending {priceSats}{" "}
+            sats. Use this site to calibrate as the price changes.
+          </p>
+        </div>
+
+        <div class="d-flex flex-column">
+          <div class="flex-grow-1 "></div>
+        </div>
+        <div class="col-sm-4"></div>
+        <div
+          class="col-12 m-3 text-center text-light
+        p-4"
+        >
+          <nav class="navbar container  rounded navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+            <a class="navbar-brand">
+              {<FaBitcoin />} = ${price}{" "}
+            </a>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://www.coindesk.com/price/bitcoin"
+                >
+                  Powered by CoinDesk
                 </a>
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="https://www.coindesk.com/price/bitcoin"
-                    >
-                      Powered by CoinDesk
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </React.Fragment>
