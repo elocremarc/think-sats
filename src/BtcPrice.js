@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaBitcoin } from "react-icons/fa";
+import { FaBitcoin, FaGithub } from "react-icons/fa";
 import "./App.css";
 import commaNum from "./commaNum";
 
@@ -29,19 +29,18 @@ const BtcPrice = () => {
     <React.Fragment>
       <div class="container vh-100">
         <div class="col-12 text-light text-center">
-          <h1 class="display-4 text-center">Think Sats</h1>
-          <h5>$1 buys {priceSats} sats</h5>
+          <h1 class="display-4 text-center pt-4">Think Sats</h1>
+          <h5> $1 buys {priceSats} sats</h5>
         </div>
 
         <div class="d-flex justify-content-center">
           <p class="w-50 pt-4 text-left text-light">
             A Bitcoin can be broken down into {commaNum(sats)} sats. Thinking in
-            terms of sats is much more useful than looking at the price of
-            bitcoin. Currently if you spend $1 it is like spending {priceSats}{" "}
-            sats. Use this site to calibrate as the price changes.
+            terms of sats is much more useful than looking at the bitcoin price.
+            Currently if you spend $1 it is like spending {priceSats} sats.
+            Bookmark this site and check back to calibrate as the price changes.
           </p>
         </div>
-
         <div class="d-flex flex-column">
           <div class="flex-grow-1 "></div>
         </div>
@@ -50,21 +49,25 @@ const BtcPrice = () => {
           class="col-12 m-3 text-center text-light
         p-4"
         >
-          <nav class="navbar container  rounded navbar-expand-sm bg-dark navbar-dark fixed-bottom">
-            <a class="navbar-brand">
-              {<FaBitcoin />} = ${price}{" "}
+          <div class="d-flex flex-row rounded-top bg-dark fixed-bottom p-2">
+            <a
+              class="link text-light"
+              href="https://www.coindesk.com/price/bitcoin"
+            >
+              {" "}
+              Powered by CoinDesk
             </a>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="https://www.coindesk.com/price/bitcoin"
-                >
-                  Powered by CoinDesk
-                </a>
-              </li>
-            </ul>
-          </nav>
+            <div class="flex-fill">
+              {<FaBitcoin />} = ${price}
+            </div>
+
+            <a
+              class="text-light"
+              href="https://github.com/elocremarc/think-sats"
+            >
+              <FaGithub />
+            </a>
+          </div>
         </div>
       </div>
     </React.Fragment>
