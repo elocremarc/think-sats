@@ -27,7 +27,7 @@ const BtcPrice = () => {
 
   return (
     <React.Fragment>
-      <div class="container vh-100">
+      <div class="container h-100 ">
         <div class="col-12 text-light text-center">
           <h1 class="display-4 text-center pt-4">Think Sats</h1>
           <h5> $1 buys {priceSats} sats</h5>
@@ -49,7 +49,7 @@ const BtcPrice = () => {
           class="col-12 m-3 text-center text-light
         p-4"
         >
-          <div class="d-flex flex-row  rounded-top  fixed-bottom p-2">
+          <div class="d-flex flex-row  rounded-top bg-dark  fixed-bottom p-2">
             <a
               class="text-light"
               href="https://github.com/elocremarc/think-sats"
