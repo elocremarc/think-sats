@@ -1,6 +1,6 @@
 import React from "react";
 import { FaBitcoin, FaGithub } from "react-icons/fa";
-
+import commaNum from "./commaNum";
 export default function Footer(props) {
   return (
     <React.Fragment>
@@ -14,7 +14,7 @@ export default function Footer(props) {
             <FaGithub />
           </a>
           <div className="flex-fill">
-            {<FaBitcoin />} = ${props.price}
+            {<FaBitcoin />} = ${commaNum(props.price)}
           </div>
           <a
             className="link text-light"

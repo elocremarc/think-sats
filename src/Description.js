@@ -6,11 +6,10 @@ export default function Description(props) {
     <React.Fragment>
       <div className="d-flex justify-content-center">
         <p className="w-75 container pt-4 text-left text-light">
-          A Bitcoin can be broken down into {commaNum(props.sats)} sats.
-          Thinking in terms of sats is much more useful than looking at the
-          bitcoin price. Currently if you spend $1 it is like spending{" "}
-          {commaNum(props.priceSats)} sats. Bookmark this site and check back to
-          calibrate as the price changes.
+          A Bitcoin can be divided into {commaNum(props.sats)} satoshis or sats.
+          Currently $1 buys {commaNum(props.priceSats)} sats. If you think in
+          terms of sats you can break the habbit of thinking in terms of
+          dollars.
         </p>
       </div>
     </React.Fragment>

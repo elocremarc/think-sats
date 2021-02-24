@@ -8,28 +8,21 @@ import FullTable from "./FullTable";
 import loadTable from "./loadTable";
 import LoadingWrapper from "./LoadingWrapper";
 
-const url = "https://api.coindesk.com/v1/bpi/currentprice.json";
-
 const BtcPrice = () => {
-  const [price, setPrice] = useState([]);
+  let [price, setPrice] = useState([]);
   let [priceSats, setPriceSats] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [tabledata, setTableData] = useState([]);
+  let [tabledata, setTableData] = useState([]);
   const sats = 100000000;
 
   const getPrice = async () => {
+    const url = "https://api.coindesk.com/v1/bpi/currentprice.json";
     const response = await fetch(url);
     const apiPrice = await response.json();
 
-    let btcPrice = apiPrice.bpi.USD.rate_float;
-    let btcRnd = Math.round(btcPrice);
-
-    setPrice(commaNum(btcRnd));
-    priceSats = String(Math.round(sats / btcPrice));
-    setPriceSats(priceSats);
-
-    setTableData(loadTable({ priceSats, sats, price }));
-
+    setPrice(Math.round(apiPrice.bpi.USD.rate_float));
+    setPriceSats(Math.round(sats / price));
+    setTableData(loadTable({ price }));
     setLoading(false);
   };
 
