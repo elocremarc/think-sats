@@ -5,6 +5,7 @@ import Description from "./Description";
 import Footer from "./Footer";
 import Header from "./Header";
 import FullTable from "./FullTable";
+import EmojiTable from "./EmojiTable";
 import loadTable from "./loadTable";
 import LoadingWrapper from "./LoadingWrapper";
 
@@ -23,9 +24,9 @@ const BtcPrice = () => {
     setPrice(Math.round(apiPrice.bpi.USD.rate_float));
     setPriceSats(Math.round(sats / price));
     setTableData(loadTable({ price }));
+    console.log(tabledata);
     setLoading(false);
   };
-
   useEffect(() => {
     getPrice();
     document.title = `$1 buys ${commaNum(priceSats)} Sats`;
@@ -37,6 +38,8 @@ const BtcPrice = () => {
         <div className="container">
           <Header priceSats={priceSats} />
           <Description priceSats={priceSats} sats={sats} />
+          <EmojiTable priceSats={priceSats} />
+
           <FullTable tabledata={tabledata} />
           <Footer price={price} />
         </div>

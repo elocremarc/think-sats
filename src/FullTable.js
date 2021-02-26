@@ -17,7 +17,7 @@ export default function FullTable(props) {
     <React.Fragment>
       <div className="d-flex p-4 w-50 justify-content-center container">
         <div className="flex-grow-1 ">
-          <table className="table text-light table-sm ">
+          <table className="table text-light table-sm text-left">
             <thead>
               <tr>
                 <th>Dollars</th>
