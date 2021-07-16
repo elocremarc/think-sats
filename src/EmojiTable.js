@@ -17,7 +17,7 @@ export default function EmojiTable(props) {
         <tr key={index}>
           <td>{emoji}</td>
           <td>{commaNum(name)}</td>
-          <td className="">{commaNum(cost * props.priceSats)}</td>
+          <td className="">{commaNum(cost * props.priceSats)} ⧖</td>
         </tr>
       );
     });

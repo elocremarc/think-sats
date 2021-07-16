@@ -29,7 +29,7 @@ const BtcPrice = () => {
   };
   useEffect(() => {
     getPrice();
-    document.title = `$1 buys ${commaNum(priceSats)} Sats`;
+    document.title = `$1 buys ${commaNum(priceSats)} ⧖`;
   });
 
   return (

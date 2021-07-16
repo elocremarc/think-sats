@@ -8,7 +8,7 @@ export default function FullTable(props) {
       return (
         <tr key={index}>
           <td>${commaNum(qtyDolla)}</td>
-          <td>{commaNum(qtySats)}</td>
+          <td>{commaNum(qtySats)} ⧖</td>
         </tr>
       );
     });

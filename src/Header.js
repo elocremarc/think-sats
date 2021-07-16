@@ -5,8 +5,8 @@ export default function Header(props) {
   return (
     <React.Fragment>
       <div className="col-12 text-light text-center">
-        <h1 className="display-4 text-center pt-4">Think Sats</h1>
-        <h5> $1 buys {commaNum(props.priceSats)} sats</h5>
+        <h1 className="display-4 text-center pt-4">Think Sats ⧖</h1>
+        <h5> $1 buys {commaNum(props.priceSats)} ⧖ </h5>
       </div>
     </React.Fragment>
   );
